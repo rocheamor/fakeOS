@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #884A39;
+}
+
+main {
+    width: 390px;
+    height: 844px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    background-color: #F9E0BB;
+}
+
+.button {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    &__close {
+        background-color: #884A39;
+        padding: 3px;
+        margin: 5px;
+        border-radius: 3px;
+        border-color: white;
+        color: white;
+    }
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.form-wrapper {
+    border-radius: 8px;;
+    box-shadow: #00000029 0px 1px 4px;
+    margin: 50px 15px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0px;
+}
+
+.planner-form {
+    display: flex;
+    display: grid;
+    grid-template-columns: .05fr 1.5fr;
+    grid-gap: 15px;
+    &__details {
+        border-radius: 5px;
+        padding: 5px;
+    }
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    width: 100%;
+    .clear , .submit {
+        background-color: #884A39;
+        padding: 3px;
+        margin: 5px;
+        border-radius: 3px;
+        border-color: white;
+        color: white;
+    }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/planner-form.css">
+    <script src="./scripts/planner-form.js" defer></script>
+    <title>Planner Form</title>
+</head>
+<body>
+    <main>
+        <div class="button">
+            <button class="button__close">Close</button>
+        </div>
+        <p>Fill-out this task form.</p>
+        <div class="form-wrapper">
+            <div class="container">
+                <form class="planner-form">
+                    <label for="month">Month: </label>
+                    <select name="monthList" id="monthList" class="planner-form__details">
+                        <option value="january">January</option>
+                        <option value="february">February</option>
+                        <option value="march">March</option>
+                        <option value="april">April</option>
+                        <option value="may">May</option>
+                        <option value="june">June</option>
+                        <option value="july">July</option>
+                        <option value="august">August</option>
+                        <option value="september">September</option>
+                        <option value="october">October</option>
+                        <option value="november">November</option>
+                        <option value="december">December</option>
+                    </select>
+
+                    <label for="day">Day: </label>
+                    <input type="number" name="day" id="day" min="1" max="31" class="planner-form__details" required>
+
+                    <label for="task">Task: </label>
+                    <textarea name="task" id="task" placeholder="Write your task here" rows="3" cols="30" class="planner-form__details" required></textarea>
+                    
+                    <div class="form-buttons">
+                        <button class="clear">Clear</button>
+                        <input type="submit" value="Submit" class="submit">
+                    </div>
+
+                </form> 
+
+            </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #f5d9f3;
+}
+
+main {
+    width: 390px;
+    height: 844px;
+    border: 1px solid black;
+    background-image: url('../assets/stars.jpg');
+    background-size: auto;
+}
+
+.button {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    margin-right: 20px;
+    &__close{
+    background-color: #e4b4dd;
+    color: #1b0115;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 3px;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0px 15px;
+    height: 80%;
+}
+.horoscope-reading {
+    #nameParagraph {
+        margin: 30px 0px;;
+        font-size: 30px;
+    } 
+    #readingParagraph {
+        padding-top: 20px;;
+        font-size: 20px;
+    }
+}
