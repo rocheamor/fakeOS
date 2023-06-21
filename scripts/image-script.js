@@ -32,7 +32,7 @@ arrowNext.addEventListener('click', function() {
 arrowBack.addEventListener('click', function() {
     currentIndex--;
     if (currentIndex < 0) {
-      currentIndex = 14;
+      currentIndex = galleryImages.length - 1;
     }
     imgElement.src = './assets/' + galleryImages[currentIndex];
   });

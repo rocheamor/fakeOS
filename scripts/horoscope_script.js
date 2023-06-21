@@ -9,8 +9,6 @@ homePage.addEventListener('click', function() {
 
 
 const horoscopeForm = document.querySelector('.form');
-const inputName = document.getElementById('name');
-
 
 const submitHoroscopeForm = (event) => {
   event.preventDefault();

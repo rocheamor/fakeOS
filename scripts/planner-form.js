@@ -6,4 +6,31 @@ plannerHomePage.addEventListener('click', function() {
 
 
 
-const monthlyPlanner = [{month: 1, day: 19, task: "Go to the doctor"}, {month: 2, day: 29, task: "See the GP"}];
+const addPlanBtn = document.querySelector('#addPlan');
+const form = document.querySelector('.planner-form')
+
+
+addPlanBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  const monthInput = document.querySelector('#monthList').value;
+  const dayInput = document.querySelector('#day').value;
+  const taskInput = document.querySelector('#task').value;
+
+  const plannerObject = {month: monthInput , day: dayInput , task: taskInput};
+
+  let monthlyPlan = [];
+
+  if(window.sessionStorage.getItem("monthlyPlanner")) {
+    monthlyPlan = JSON.parse(window.sessionStorage.getItem("monthlyPlanner"))
+  }
+
+  monthlyPlan.push(plannerObject);
+  window.sessionStorage.setItem("monthlyPlanner", JSON.stringify(monthlyPlan));
+
+  form.reset();
+});
+
+
+
+

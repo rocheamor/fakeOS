@@ -12,7 +12,6 @@ galleryPage.addEventListener('click', function() {
   window.location.href = './gallery.html';
 });
 
-
 const horoscopePage = document.getElementById('horoscope');
 horoscopePage.addEventListener('click', function() {
   window.location.href = './horoscope.html';

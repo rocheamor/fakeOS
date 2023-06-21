@@ -1,19 +1,16 @@
-
-// Get the query string from the URL
-const queryString = window.location.search;
-// Create a URLSearchParams object and pass the query string
-const params = new URLSearchParams(queryString);
-// Get the value of the 'imageName' parameter
-const nameSelected = params.get('name');
-const birthdaySelected = params.get('birthday');
-const nameParagraph = document.getElementById('nameParagraph');
-const readingParagraph = document.getElementById('readingParagraph');
-
-
 const horoscopePageForm = document.querySelector('.button__close');
 horoscopePageForm.addEventListener('click', function() {
   window.location.href = './horoscope.html';
 });
+
+// Get the query string from the URL
+const queryString = window.location.search;
+// Create a URLSearchParams object and pass the query string
+const urlParameters = new URLSearchParams(queryString);
+const nameSelected = urlParameters.get('name');
+const birthdaySelected = urlParameters.get('birthday');
+const nameParagraph = document.getElementById('nameParagraph');
+const readingParagraph = document.getElementById('readingParagraph');
 
 const horoscopeArray = [
     {sign: "Aries" , startDate: "March 21", endDate: "April 19", reading: "When 2023 begins, your ruling planet, Mars, will be retrograde. Lean into this as an excuse to rest up early in the new year. Things get busy quickly. Soon, Mars injects passion into stagnant relationships, while Venus helps keep the romance flowing. The new year sees you becoming sincere and assertive regarding your needs in love and other areas of your life. Your friends will provide a crucial foundation that helps you in love and steadies you in your career. And, speaking of your professional life, several days indicate abundance is coming your way. Just prepare to release a bad habit (or bad relationship) when Pluto goes retrograde."},
@@ -30,9 +27,6 @@ const horoscopeArray = [
     {sign: "Pisces" , startDate: "February 19", endDate: "March 20", reading: "When it comes to love, 2023 asks you to go ahead and have the tough conversations, Pisces. As the last sign of the zodiac, you're often called the wisest star sign. So, you should know by now that define-the-relationship talks only become more stressful the longer you procrastinate. Regarding your friendships, don't get so caught up in the business of your love life this year that you neglect them. This year also encourages you to accept professional praise (as some may come your way) and admit that you enjoy fame and recognition, even if you are the final and wisest sign of the zodiac."},
 ];
 
-
-const nameInput = document.getElementById('name');
-const namePara = document.getElementById('nameParagraph');
 
 const findZodiacSign = (date) => {
   const inputDate = new Date(date);
@@ -51,7 +45,6 @@ const findZodiacSign = (date) => {
 }
 
 
-const inputDate = "January 21";
 const zodiacSign = findZodiacSign(birthdaySelected);
 
 if (zodiacSign) { 

@@ -58,14 +58,13 @@ p {
         border-radius: 5px;
         padding: 5px;
     }
+
 }
 
-.form-buttons {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-    width: 100%;
-    .clear , .submit {
+.submit {
+    grid-column: 2;
+    text-align: right;
+    .submit-button {
         background-color: #884A39;
         padding: 3px;
         margin: 5px;
@@ -74,3 +73,7 @@ p {
         color: white;
     }
 }
+
+
+
+
