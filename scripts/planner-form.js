@@ -8,9 +8,9 @@ const addPlanBtn = document.querySelector('#addPlan');
 const form = document.querySelector('.planner-form')
 
 
-addPlanBtn.addEventListener("submit", (event) => {
+const submitPlan = (event) => {
   event.preventDefault();
-
+  console.log("bdsjabcfk");
   const monthInput = document.querySelector('#monthList').value;
   const dayInput = document.querySelector('#day').value;
   const taskInput = document.querySelector('#task').value;
@@ -27,8 +27,9 @@ addPlanBtn.addEventListener("submit", (event) => {
   window.localStorage.setItem("monthlyPlanner", JSON.stringify(monthlyPlan));
 
   form.reset();
-});
+};
 
+form.addEventListener("submit", (submitPlan));
 
 
 

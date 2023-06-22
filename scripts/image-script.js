@@ -19,7 +19,6 @@ if (currentIndex === -1) {
 const arrowNext = document.getElementById('arrowNext');
 const arrowBack = document.getElementById('arrowBack');
 
-// Add click event listener to the forward button
 arrowNext.addEventListener('click', function() {
     currentIndex++;
     if (currentIndex == galleryImages.length) {

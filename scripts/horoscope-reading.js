@@ -14,6 +14,7 @@ const birthdaySelected = urlParameters.get('birthday');
 const nameParagraph = document.getElementById('nameParagraph');
 const readingParagraph = document.getElementById('readingParagraph');
 
+
 const findZodiacSign = (date) => {
   const inputDate = new Date(date);
 
@@ -25,7 +26,7 @@ const findZodiacSign = (date) => {
   });
 
   if (filteredSigns.length > 0) {
-    return filteredSigns[0]; // Return the first matching zodiac sign
+    return filteredSigns[0];
   }
   return null;
 }

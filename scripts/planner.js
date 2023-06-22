@@ -44,7 +44,7 @@ const december = document.querySelector('#december');
 
 
 const plannerString = localStorage.getItem('monthlyPlanner');
-// console.log(plannerString, "planner string");
+console.log(plannerString, "planner string");
 let monthlyPlanner = [];
 // // Parse the string back into an array
 monthlyPlanner = JSON.parse(plannerString);
