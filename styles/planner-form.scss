@@ -1,17 +1,22 @@
+@use '../styles/mixins';
+@use '../styles/theme' as t;
+
 * {
     margin: 0;
     padding: 0;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: #884A39;
+}
+
+body {
+    height: 100vh;
+    @include mixins.flex();
 }
 
 main {
-    width: 390px;
-    height: 844px;
+    @include mixins.phoneBody();
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
-    background-color: #F9E0BB;
+    color: t.$plannerSecondaryColor;
+    background-color: t.$plannerBackground;
 }
 
 .button {
@@ -19,12 +24,9 @@ main {
     justify-content: flex-end;
     padding: 20px;
     &__close {
-        background-color: #884A39;
-        padding: 3px;
-        margin: 5px;
-        border-radius: 3px;
-        border-color: white;
-        color: white;
+        @include mixins.button();
+        background-color: t.$plannerSecondaryColor;
+        color: t.$plannerTextColor;
     }
 }
 
@@ -36,43 +38,43 @@ p {
 }
 
 .form-wrapper {
-    border-radius: 8px;;
+    border-radius: t.$inputBorderRadius;
     box-shadow: #00000029 0px 1px 4px;
     margin: 50px 15px;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 0px;
-}
-
-.planner-form {
-    display: flex;
-    display: grid;
-    grid-template-columns: .05fr 1.5fr;
-    grid-gap: 15px;
-    &__details {
-        border-radius: 5px;
-        padding: 5px;
+    .container {
+        @include mixins.flex();
+        padding: 40px 15px;
     }
-
-}
-
-.submit {
-    grid-column: 2;
-    text-align: right;
-    .submit-button {
-        background-color: #884A39;
-        padding: 3px;
-        margin: 5px;
-        border-radius: 3px;
-        border-color: white;
-        color: white;
+    .planner-form {
+        display: flex;
+        display: grid;
+        grid-template-columns: 0.05fr 1.5fr;
+        grid-gap: 15px;
+        &__details {
+            border-radius: 5px;
+            padding: 5px;
+            border-color: t.$plannerSecondaryColor;
+        }
+        option {
+            color: t.$plannerSecondaryColor;
+        }
+    }
+    .submit {
+        grid-column: 2;
+        text-align: right;
+        .submit-button {
+            @include mixins.button();
+            background-color: t.$plannerSecondaryColor;
+            color: t.$plannerTextColor;
+        }
     }
 }
+
+
+
+
+
+
 
 
 

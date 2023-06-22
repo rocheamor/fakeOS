@@ -4,12 +4,6 @@ homePage.addEventListener('click', function() {
 });
 
 
-
-
-
-
-const horoscopeForm = document.querySelector('.form');
-
 const submitHoroscopeForm = (event) => {
   event.preventDefault();
 
@@ -19,5 +13,7 @@ const submitHoroscopeForm = (event) => {
 
   appendNameInput(nameInput);
 }
+
+const horoscopeForm = document.querySelector('.form');
 
 horoscopeForm.addEventListener("submit", (submitHoroscopeForm));

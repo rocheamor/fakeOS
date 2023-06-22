@@ -1,50 +1,54 @@
+@use '../styles/mixins';
+@use '../styles/theme' as t;
+
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
-    width: 390px;
-    height: 844px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
-
-}
-    
-main {
-    background-color: aliceblue;
-}
-
-.navbar {
-    font-family: Arial, Helvetica, sans-serif;
-    padding-bottom: 20px;
-    text-align: right;
-    &__close{
-        font-size: small;
-        font-weight: bold ;
-        color:#04665c;
+    height: 100vh;
+    @include mixins.flex();
+    .wrapper {
+        background-color: t.$galleryBackgroundColor;
+        @include mixins.phoneBody();
+        @include mixins.flex();
+    }
+    header {
+        @include mixins.flex(flex-end, row);
+        width:100%;
+        margin: 20px;
+        padding-right: 30px;
+        button {
+            @include mixins.button();
+            color:t.$galleryTextColor; 
+        }
+    }
+    img {
+        width: 350px;
+        height: 700px;
+    }
+    footer {
+        color: t.$galleryTextColor;
+        font-size: xx-large;
+        padding-top: 10px;
+        ul {
+            display: flex;
+            li {
+                list-style: none;
+                padding: 0px 50px;
+            }
+        }
     }
 }
-
-img {
-    width: 370px;
-    height: 700px;
-}
-
-footer {
-    color: #04665C;
-    font-size: xx-large;
-    padding-top: 30px;
-}
-
-ul {
-    display: flex;
-    justify-content: space-around;
     
-}
 
-li {
-    list-style: none;
-}
+
+
+
+
+
+
+
+
+

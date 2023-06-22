@@ -1,52 +1,52 @@
+@use '../styles/mixins';
+@use '../styles/theme' as t;
+
+
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
-    width: 390px;
-    height: 844px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
-    background-color: aliceblue;
-    
-}
-
-main {
-    display:flex;
-    flex-direction: column;
+    height: 100vh;
+    @include mixins.flex();
+    .wrapper {
+        @include mixins.phoneBody();
+        display:flex;
+        flex-direction: column;
+        background-color: t.$galleryBackgroundColor;
+        
+    }
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    font-family: Arial, Helvetica, sans-serif;
-    padding-bottom: 20px;
+    @include mixins.flex(space-between, row);
+    font-family: t.$fontFamily;
+    padding: 20px;
     &__gallery {
-        font-size: x-large;
+        font-size: 30px;
         font-weight: bolder;
-        color:#04665c;
+        color: t.$galleryTextColor; 
     }
     &__close{
-        font-size: small;
-        font-weight: bold ;
-        color:#04665c;
+        @include mixins.button();
+        color:t.$galleryTextColor; 
     }
 }
 
 .images {
     height: 700px;
-    display:flex;
+    background-color: t.$gallerySecondaryBackground;
+    @include mixins.flex();
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center;
-    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: 2px; 
+    border-radius: 8px;
+    img {
+        width: 120px;
+        height: 130px;
+        padding: 2px;
+        border-radius: 10px;
+    }
 }
 
-img {
-    width: 120px;
-    height: 130px;
-    padding: 2px;
-}

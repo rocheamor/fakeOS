@@ -4,13 +4,11 @@ plannerHomePage.addEventListener('click', function() {
   window.location.href = './planner.html';
 });
 
-
-
 const addPlanBtn = document.querySelector('#addPlan');
 const form = document.querySelector('.planner-form')
 
 
-addPlanBtn.addEventListener("click", (event) => {
+addPlanBtn.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const monthInput = document.querySelector('#monthList').value;
@@ -21,12 +19,12 @@ addPlanBtn.addEventListener("click", (event) => {
 
   let monthlyPlan = [];
 
-  if(window.sessionStorage.getItem("monthlyPlanner")) {
-    monthlyPlan = JSON.parse(window.sessionStorage.getItem("monthlyPlanner"))
+  if(window.localStorage.getItem("monthlyPlanner")) {
+    monthlyPlan = JSON.parse(window.localStorage.getItem("monthlyPlanner"))
   }
 
   monthlyPlan.push(plannerObject);
-  window.sessionStorage.setItem("monthlyPlanner", JSON.stringify(monthlyPlan));
+  window.localStorage.setItem("monthlyPlanner", JSON.stringify(monthlyPlan));
 
   form.reset();
 });

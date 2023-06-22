@@ -1,0 +1,26 @@
+@mixin phoneBody() {
+    width: 390px;
+    height: 844px;
+    border: 2px solid black;
+    border-radius: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+@mixin flex($justify: center, $column: column) {
+    display: flex;
+    flex-direction: $column;
+    justify-content: $justify;
+    align-items: center;
+}
+
+@mixin button() {
+  border-radius: 2px;
+  border-color: white;
+  padding: 2px 3px;
+  font-size: 15px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+@mixin formPadding() {
+  padding: 30px 20px;
+}

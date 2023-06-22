@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/horoscope-reading.css">
-    <script src="./scripts/horoscope-reading.js" defer></script>
+    <script src="./scripts/horoscope-reading.js" defer type="module"></script>
     <title>Horoscope Reading</title>
 </head>
 <body>
@@ -12,11 +12,9 @@
         <div class="button">
             <button class="button__close">Close</button>
         </div>
-        <div class="container">
-            <div class="horoscope-reading">
-                <p id="nameParagraph"></p>
-                <p id="readingParagraph"></p>
-            </div>
+        <div class="horoscope-reading">
+            <p class="horoscope-reading__name" id="nameParagraph"></p>
+            <p class="horoscope-reading__reading" id="readingParagraph"></p>
         </div>
     </main>
 </body>

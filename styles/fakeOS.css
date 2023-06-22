@@ -4,71 +4,83 @@
 }
 
 body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
   width: 390px;
   height: 844px;
-  border: 1px solid black;
+  border: 2px solid black;
+  border-radius: 15px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-family: Arial, Helvetica, sans-serif;
   font-size: smaller;
-}
-
-main {
-  background-color: black;
-}
-
-header {
   background-color: lightgrey;
 }
 
-header > div {
-  display: flex;
-  justify-content: space-between;
+.header {
+  font-size: 15px;
 }
-
-.header-left {
+.header__content {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__left {
+  display: flex;
+  flex-direction: row;
   justify-content: space-around;
+  align-items: center;
   width: 22%;
 }
-
-.header-center {
+.header__center {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
-
-.header-right {
+.header__right {
   display: flex;
   justify-content: right;
   width: 22%;
   padding-right: 3px;
 }
-.header-right .bluetooth {
-  padding: 0px 5px;
+.header__right--bluetooth {
+  padding-right: 5px;
 }
-
-li {
+.header__right--battery {
+  font-size: 18px;
+}
+.header li {
   list-style: none;
 }
 
 main {
+  background-color: black;
   padding-top: 10px;
   padding-bottom: 80px;
-  display: flex;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   color: white;
+}
+main div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0px;
 }
 
 img {
   width: 75px;
   height: 75px;
+  border-radius: 18px;
   padding-bottom: 5px;
-}
-
-main > div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 15px 0px;
 }
 
 footer {
@@ -77,13 +89,12 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   color: black;
-  background-color: lightgray;
 }
-
-footer > div {
+footer div {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=fakeOS.css.map */

@@ -7,7 +7,7 @@ const imageName = params.get('imageName');
 const galleryImage = document.querySelector(".image");
 console.log(imageName);
 const imgElement = document.createElement('img');   
-imgElement.src = './assets/' + imageName;        
+imgElement.src = './assets/gallery-images/' + imageName;        
 galleryImage.appendChild(imgElement);
 
 let galleryImages = ["flower1.jpg", "flower2.jpg", "flower3.jpg" , "flower4.jpg", "flower5.jpg", "flower6.jpg", "flower7.jpeg", "flower8.jpg", "flower9.jpg", "flower10.jpg", "flower11.jpg", "flower12.jpg", "flower13.jpg", "flower14.png", "flower15.jpg"]
@@ -25,7 +25,7 @@ arrowNext.addEventListener('click', function() {
     if (currentIndex == galleryImages.length) {
         currentIndex = 0;
     }
-    imgElement.src = './assets/' + galleryImages[currentIndex];
+    imgElement.src = './assets/gallery-images/' + galleryImages[currentIndex];
 });
 
 
@@ -34,7 +34,7 @@ arrowBack.addEventListener('click', function() {
     if (currentIndex < 0) {
       currentIndex = galleryImages.length - 1;
     }
-    imgElement.src = './assets/' + galleryImages[currentIndex];
+    imgElement.src = './assets/gallery-images/' + galleryImages[currentIndex];
   });
 
 
