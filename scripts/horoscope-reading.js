@@ -1,10 +1,13 @@
+//create another js file that contains just the array of horoscope objects and import in this file
 import horoscopeArray from "./horoscope-array.js";
 
+//navigate back to horoscope homepage after clicking the close button
 const horoscopePageForm = document.querySelector('.button__close');
 horoscopePageForm.addEventListener('click', function() {
   window.location.href = './horoscope.html';
 });
 
+//To display the horoscope reading,
 // Get the query string from the URL
 const queryString = window.location.search;
 // Create a URLSearchParams object and pass the query string
