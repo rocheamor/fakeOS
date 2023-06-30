@@ -1,3 +1,4 @@
+import toNavigatePage from "./navigation-codes.js";
 //navigate back to planner homepage after clicking the close button
 const plannerHomePage = document.querySelector('.button__close');
 plannerHomePage.addEventListener('click', function() {

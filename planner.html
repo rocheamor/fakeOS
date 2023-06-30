@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/planner.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="./scripts/planner.js" defer></script>
+    <script src="./scripts/planner.js" defer type="module"></script>
     <title>Planner</title>
 </head>
 <body>
     <main>
         <header class="navbar">
-            <button class="navbar__add-button"><i class="fa-solid fa-plus"></i></button>
-            <button class="navbar__close-button">Close</button>
+            <button class="navbar__add-button" id="addButton"><i class="fa-solid fa-plus"></i></button>
+            <button class="navbar__close-button" id="closeButton">Close</button>
         </header>
         <h2>My 2023 Planner</h2>
         <div class="months">

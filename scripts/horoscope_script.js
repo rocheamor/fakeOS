@@ -1,8 +1,7 @@
+import toNavigatePage from "./navigation-codes.js";
+
 //navigate back to fakeOS homepage after clicking the close button
-const homePage = document.querySelector('.button__close');
-homePage.addEventListener('click', function() {
-  window.location.href = './fakeOS.html';
-});
+toNavigatePage('closeButton', './fakeOS.html')
 
 //create a function to submit horoscope, extracting the name and birthday inputs, passing them as parameters for the query string in the horoscope-reading page to display the necessary information about the horoscope reading of the user
 

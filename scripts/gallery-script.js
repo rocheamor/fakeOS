@@ -1,12 +1,8 @@
+import galleryImages from "./gallery-array.js";
+import toNavigatePage from "./navigation-codes.js";
+
 //navigate back to fakeOS homepage after clicking the close button
-const homePage = document.getElementById('closeButton');
-homePage.addEventListener('click', function() {
-  window.location.href = './fakeOS.html';
-});
-
-//create an array of gallery images using the image names
-const galleryImages = ["flower1.jpg", "flower2.jpg", "flower3.jpg" , "flower4.jpg", "flower5.jpg", "flower6.jpg", "flower7.jpeg", "flower8.jpg", "flower9.jpg", "flower10.jpg", "flower11.jpg", "flower12.jpg", "flower13.jpg", "flower14.png", "flower15.jpg"]
-
+toNavigatePage('closeButton', './fakeOS.html');
 
 
 const gallery = document.querySelector(".images");

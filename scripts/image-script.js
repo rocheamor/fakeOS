@@ -1,8 +1,8 @@
+import galleryImages from "./gallery-array.js";
+import toNavigatePage from "./navigation-codes.js";
+
 //navigate back to gallery homepage after clicking the close button
-const galleryPage = document.getElementById('closeButton');
-galleryPage.addEventListener('click', function() {
-  window.location.href = './gallery.html';
-});
+toNavigatePage('closeButton', './gallery.html');
 
 //To view the images from the gallery one at a time using the arrows
 // Get the query string from the URL
@@ -15,8 +15,6 @@ const galleryImage = document.querySelector(".image");
 const imgElement = document.createElement('img');   
 imgElement.src = './assets/gallery-images/' + imageName;        
 galleryImage.appendChild(imgElement);
-
-const galleryImages = ["flower1.jpg", "flower2.jpg", "flower3.jpg" , "flower4.jpg", "flower5.jpg", "flower6.jpg", "flower7.jpeg", "flower8.jpg", "flower9.jpg", "flower10.jpg", "flower11.jpg", "flower12.jpg", "flower13.jpg", "flower14.png", "flower15.jpg"]
 
 //identify the index of the image the user clicks on
 let currentIndex = galleryImages.indexOf(imageName);
@@ -32,7 +30,6 @@ arrowNext.addEventListener('click', function() {
     }
     imgElement.src = './assets/gallery-images/' + galleryImages[currentIndex];
 });
-
 
 arrowBack.addEventListener('click', function() {
    //decrement index by 1 to view the previous image; if current image is the first image, go back to the last image

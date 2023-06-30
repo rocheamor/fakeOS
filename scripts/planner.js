@@ -1,15 +1,9 @@
+import toNavigatePage from "./navigation-codes.js";
+
 //navigate to planner-form page after clicking the + button
-const plannerFormPage = document.querySelector('.navbar__add-button');
-plannerFormPage.addEventListener('click', function() {
-  window.location.href = './planner-form.html';
-});
-
+toNavigatePage('addButton', './planner-form.html');
 //navigate back to fakeOS homepage after clicking the close button
-const homePage = document.querySelector('.navbar__close-button');
-homePage.addEventListener('click', function() {
-  window.location.href = './fakeOS.html';
-});
-
+toNavigatePage('closeButton', './fakeOS.html');
 
 //collapsible list of plan section
 let taskList = document.getElementsByClassName("month");
