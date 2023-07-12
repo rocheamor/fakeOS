@@ -1,0 +1,52 @@
+@use '../styles/mixins';
+@use '../styles/theme' as t;
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    @include mixins.flex();
+    .wrapper {
+        @include mixins.phoneBody();
+        display:flex;
+        flex-direction: column;
+        background-color: t.$galleryBackgroundColor;
+        
+    }
+}
+
+.navbar {
+    @include mixins.flex(space-between, row);
+    font-family: t.$fontFamily;
+    padding: 20px;
+    &__gallery {
+        font-size: 30px;
+        font-weight: bolder;
+        color: t.$galleryTextColor; 
+    }
+    &__close{
+        @include mixins.button();
+        color:t.$galleryTextColor; 
+    }
+}
+
+.images {
+    height: 700px;
+    background-color: t.$gallerySecondaryBackground;
+    @include mixins.flex();
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: 2px; 
+    border-radius: 8px;
+    img {
+        width: 120px;
+        height: 130px;
+        padding: 2px;
+        border-radius: 10px;
+    }
+}
+

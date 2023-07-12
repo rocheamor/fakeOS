@@ -1,0 +1,42 @@
+@use '../styles/mixins';
+@use '../styles/theme' as t;
+
+* {
+    margin: 0;
+    padding: 0;
+    color: #f5d9f3;
+}
+body {
+    height: 100vh;
+    @include mixins.flex();
+    main {
+        @include mixins.phoneBody();
+        background-image: url('../assets/stars.jpg');
+        background-size: auto;
+    }
+}
+
+.button {
+    text-align: right; 
+    padding: 20px;
+    &__close{
+    @include mixins.button();
+    background-color: t.$horoscopeButtonBackgroundColor;
+    color:black;
+    }
+}
+
+.horoscope-reading {
+    @include mixins.flex();
+    text-align: center;
+    padding: 0px 15px;
+    height: 80%;
+    #nameParagraph {
+        margin: 30px 0px;;
+        font-size: 30px;
+    } 
+    #readingParagraph {
+        padding-top: 20px;;
+        font-size: 20px;
+    }
+}

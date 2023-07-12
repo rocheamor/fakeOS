@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles/horoscope.css">
+        <script src="./scripts/horoscope_script.js" defer type="module"></script>
+        <title>Horoscope 2023</title>
+    </head>
+    <body>
+        <main class="wrapper">
+            <div class="button">
+                <button class="button__close" id="closeButton">Close</button>
+            </div>
+            <div class="form-container">
+                <h1>Find Your Luck!</h1>
+                <p>Will 2023 be a good year for you?</p>
+                <form class="form">
+                    <label for="name">What's your name?</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Name"
+                        required
+                    />
+                    <label>When is your birthday?</label>
+                    <input 
+                        type="text"
+                        id="birthday"
+                        name="birthday"
+                        placeholder="January 1"
+                        required
+                        />
+                    <input
+                        id="button"
+                        class="submit-button"
+                        type="submit"
+                        value="Click to find out!"
+                    />
+                </form>
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,68 @@
+@use '../styles/mixins';
+@use '../styles/theme' as t;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    @include mixins.flex();
+}
+
+main {
+    @include mixins.phoneBody();
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    background-color: t.$plannerBackground;
+}
+
+.navbar {
+    @include mixins.flex(space-between, row);
+    padding: 20px;
+    button {
+        @include mixins.button();
+        background-color: t.$plannerSecondaryColor;
+        border-color: t.$plannerTextColor;
+        color: t.$plannerTextColor
+    }
+}
+
+h2 {
+    text-align: center ;
+    margin-bottom: 18px;
+    color: t.$plannerSecondaryColor;
+    font-weight: bolder;
+}
+
+.months {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    .month {
+        padding: 10px;
+        margin: 15px;
+        background-color: t.$plannerSecondaryColor;
+        cursor: pointer;
+        border-radius: 8px;
+        color: t.$plannerTextColor;
+    }
+    .active, .month:hover {
+        background-color: t.$plannerMonthBackground;
+        color: t.$plannerSecondaryColor;
+        border: 1px solid t.$plannerSecondaryColor;
+    }
+    .task-list {
+        display: none;
+        list-style: none;
+        background-color: t.$plannerBackground;
+        color: t.$plannerSecondaryColor;
+      }
+}
+
+
+
+
+

@@ -1,0 +1,81 @@
+@use '../styles/mixins';
+@use '../styles/theme' as t;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    @include mixins.flex();
+}
+
+main {
+    @include mixins.phoneBody();
+    display: flex;
+    flex-direction: column;
+    color: t.$plannerSecondaryColor;
+    background-color: t.$plannerBackground;
+}
+
+.button {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    &__close {
+        @include mixins.button();
+        background-color: t.$plannerSecondaryColor;
+        color: t.$plannerTextColor;
+    }
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.form-wrapper {
+    border-radius: t.$inputBorderRadius;
+    box-shadow: #00000029 0px 1px 4px;
+    margin: 50px 15px;
+    .container {
+        @include mixins.flex();
+        padding: 40px 15px;
+    }
+    .planner-form {
+        display: flex;
+        display: grid;
+        grid-template-columns: 0.05fr 1.5fr;
+        grid-gap: 15px;
+        &__details {
+            border-radius: 5px;
+            padding: 5px;
+            border-color: t.$plannerSecondaryColor;
+        }
+        option {
+            color: t.$plannerSecondaryColor;
+        }
+    }
+    .submit {
+        grid-column: 2;
+        text-align: right;
+        .submit-button {
+            @include mixins.button();
+            background-color: t.$plannerSecondaryColor;
+            color: t.$plannerTextColor;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+

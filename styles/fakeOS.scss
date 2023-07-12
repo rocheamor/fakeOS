@@ -1,0 +1,82 @@
+@use '../styles/mixins';
+
+$primaryBackground: black;
+$secondaryBackground: lightgrey;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    @include mixins.flex();
+}
+
+.wrapper {
+    @include mixins.phoneBody();
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:smaller;
+    background-color: $secondaryBackground;
+}
+
+.header {
+    font-size: 15px;
+    &__content {
+        @include mixins.flex(space-between, row);
+    }
+    &__left {
+        @include mixins.flex(space-around, row);
+        width: 22%;
+    }
+    &__center {
+        @include mixins.flex();
+    }
+    &__right {
+        display: flex;
+        justify-content: right;
+        width: 22%;
+        padding-right: 3px;
+        &--bluetooth {
+            padding-right: 5px;
+        }
+        &--battery {
+            font-size: 18px;
+        }
+    }
+    li {
+        list-style: none;
+    }
+}
+
+main {
+    background-color: $primaryBackground;
+    padding-top: 10px;
+    padding-bottom: 80px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    color: white;
+    div {
+        @include mixins.flex();
+        padding: 15px 0px;
+    }
+}
+
+img {
+    width: 75px;
+    height: 75px;
+    border-radius: 18px; 
+    padding-bottom: 5px;
+}
+
+footer {
+    padding-top: 10px;
+    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    color: $primaryBackground;
+    div {
+        @include mixins.flex();
+
+    }
+}

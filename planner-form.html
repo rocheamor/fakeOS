@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/planner-form.css">
+    <script src="./scripts/planner-form.js" defer type="module"></script>
+    <title>Planner Form</title>
+</head>
+<body>
+    <main>
+        <div class="button">
+            <button class="button__close">Close</button>
+        </div>
+        <p>Please fill-out this planner form.</p>
+        <div class="form-wrapper">
+            <div class="container">
+                <form class="planner-form">
+                    <label for="month">Month: </label>
+                    <select name="monthList" id="monthList" class="planner-form__details">
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select>
+
+                    <label for="day">Day: </label>
+                    <input type="number" name="day" id="day" min="1" max="31" class="planner-form__details" required>
+
+                    <label for="task">Task: </label>
+                    <textarea name="task" id="task" placeholder="Write your plan here" rows="3" cols="30" class="planner-form__details" required></textarea>
+                    
+                    <div class="submit">
+                        <input type="submit" value="Add Plan" class="submit-button" id="addPlan">
+                    </div>
+                </form> 
+            </div>
+        </div>
+    </main>
+</body>
+</html>

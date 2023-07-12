@@ -1,0 +1,68 @@
+@use '../styles/mixins';
+@use '../styles/theme' as t;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    @include mixins.flex();
+}
+.wrapper {
+    @include mixins.phoneBody();
+    background-image: url('../assets/stars.jpg');
+    background-size: auto;
+}
+
+.button {
+    @include mixins.flex(flex-end, row);
+    padding: 20px;
+    &__close{
+    background-color: t.$horoscopeButtonBackgroundColor;
+    @include mixins.button();
+    }
+}
+.form-container {
+    @include mixins.flex();
+    padding: 40px 0px;
+    h1 {
+        font-size: 50px;
+        padding: 70px 0px;
+        color: t.$horoscopeTextColor;
+    }
+    p {
+        font-size: 23px;
+        color: t.$horoscopeTextColor;
+        padding-bottom: 30px;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    @include mixins.formPadding();
+    width: 300px;
+    label {
+        font-size: 20px;
+        margin-bottom: 5px;
+        color: t.$horoscopeTextColor;
+    }
+    input {
+        border: 2px solid t.$horoscopeTextColor;
+        border-radius: t.$inputBorderRadius;
+        font-size: 20px;
+        font-family: Cambria;
+        padding: 6px;
+        margin-bottom: 15px;
+    }
+    .submit-button {
+        background-color: t.$horoscopeButtonBackgroundColor;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 15px 30px;
+        border-radius: t.$inputBorderRadius;
+        margin-top: 20px;
+    }
+}

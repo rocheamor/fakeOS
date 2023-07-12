@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 390px;
+  height: 844px;
+  border: 2px solid black;
+  border-radius: 15px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  display: flex;
+  flex-direction: column;
+  color: #884A39;
+  background-color: #F9E0BB;
+}
+
+.button {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+.button__close {
+  border-radius: 2px;
+  border-color: white;
+  padding: 2px 3px;
+  font-size: 15px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-color: #884A39;
+  color: white;
+}
+
+p {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.form-wrapper {
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1607843137) 0px 1px 4px;
+  margin: 50px 15px;
+}
+.form-wrapper .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 15px;
+}
+.form-wrapper .planner-form {
+  display: flex;
+  display: grid;
+  grid-template-columns: 0.05fr 1.5fr;
+  grid-gap: 15px;
+}
+.form-wrapper .planner-form__details {
+  border-radius: 5px;
+  padding: 5px;
+  border-color: #884A39;
+}
+.form-wrapper .planner-form option {
+  color: #884A39;
+}
+.form-wrapper .submit {
+  grid-column: 2;
+  text-align: right;
+}
+.form-wrapper .submit .submit-button {
+  border-radius: 2px;
+  border-color: white;
+  padding: 2px 3px;
+  font-size: 15px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-color: #884A39;
+  color: white;
+}
+
+/*# sourceMappingURL=planner-form.css.map */
