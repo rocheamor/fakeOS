@@ -2,7 +2,7 @@ import galleryImages from "./gallery-array.js";
 import toNavigatePage from "./navigation-codes.js";
 
 //navigate back to fakeOS homepage after clicking the close button
-toNavigatePage('closeButton', './fakeOS.html');
+toNavigatePage('closeButton', './index.html');
 
 
 const gallery = document.querySelector(".images");

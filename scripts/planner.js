@@ -3,7 +3,7 @@ import toNavigatePage from "./navigation-codes.js";
 //navigate to planner-form page after clicking the + button
 toNavigatePage('addButton', './planner-form.html');
 //navigate back to fakeOS homepage after clicking the close button
-toNavigatePage('closeButton', './fakeOS.html');
+toNavigatePage('closeButton', './index.html');
 
 //collapsible list of plan section
 let taskList = document.getElementsByClassName("month");
