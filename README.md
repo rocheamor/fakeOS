@@ -1,4 +1,5 @@
 # fakeOS Project
+Deployed Link: https://roche-fakeos.netlify.app
 
 FakeOS is a captivating project that showcases my proficiency in HTML, SCSS, and JavaScript. It is an innovative virtual operating system that demonstrates my deep understanding and mastery of web development.
 
